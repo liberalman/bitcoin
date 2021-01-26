@@ -79,3 +79,33 @@ Translations are periodically pulled from Transifex and merged into the git repo
 pull from Transifex would automatically overwrite them again.
 
 Translators should also subscribe to the [mailing list](https://groups.google.com/forum/#!forum/bitcoin-translators).
+
+
+
+
+must support C++17 , gcc version 9.3.1
+boost 1.53不行，有些新函数没有的，需要用最新的1.66版本
+
+```sh
+wget https://dl.bintray.com/boostorg/release/1.66.0/source/boost_1_66_0.tar.gz
+tar -zxvf boost_1_66_0.tar.gz
+cd boost_1_66_0
+./bootstrap.sh --with-libraries=all --with-toolset=gcc
+./b2 install
+```
+--with-liraries：需要编译的库
+--with-toolset：编译时使用的编译器
+默认安装在/usr/local目录下
+
+```sh
+yum install libtool libevent-devel
+```
+
+
+compile and install
+```sh
+./autogen.sh
+./configure
+make
+```
+
