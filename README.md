@@ -101,6 +101,8 @@ cd boost_1_66_0
 yum install libtool libevent-devel
 ```
 
+apt-get install libdb++-dev libevent-dev
+
 
 compile and install
 ```sh
